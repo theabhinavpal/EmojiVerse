@@ -1,0 +1,133 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  h2{
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff99cc, #ffcc99);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  
+  header {
+    padding: 40px;
+    text-align: center;
+    color: #fff;
+    background-color: #ff66b2;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-bottom: 5px solid #ff3399;
+  }
+  
+  header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: yellow;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  
+  #emojiContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px,1fr));
+    gap: 50px;
+    padding: 50px;
+    max-width: 1200px;
+    width: 100%;
+  }
+  
+  /* Card Styles */
+  .emoji-card {
+    width: 210px;
+    height: 210px;
+    perspective: 1000px;
+    cursor: pointer;
+  }
+  
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+  }
+  
+  .card-flip .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease-in-out;
+  }
+  
+  .card-front {
+    background-color: #fff;
+    font-size: 3rem;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .card-back {
+    background-color: #f4f4f4;
+    transform: rotateY(180deg);
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 15px;
+    text-align: justify;
+  }
+  
+  .card-back h3 {
+    font-size: 1.2rem;
+    color: #ff66b2;
+    margin-bottom: 5px;
+    font-weight: 700;
+  }
+  
+  .card-back p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.4;
+    text-align: justify;
+  }
+  
+  /* Hover and Focus effects */
+  .emoji-card:hover .card-front {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  }
+
+  footer {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+}
+
+  
